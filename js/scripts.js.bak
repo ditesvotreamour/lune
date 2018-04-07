@@ -32,7 +32,7 @@ parallaxEffect = true;
 mailchimpListURL = 'http://Graphicfort.us11.list-manage.com/subscribe/post?u=dffe9a5d2b472dbe0cc471e1b&amp;id=4150cd2f12';
 
 // Your Website recaptcha Key
-recaptchaSiteKey = '6LcQulEUAAAAAOkEKICBifIzLskqcrGMY8YS4j0R';
+recaptchaSiteKey = '6LdHCQwTAAAAAK0HvYvQJ5oA_9W-vlv5A41xBEGp';
 
 // Change $ to any currency symbol you want
 donationSymbol = '$';
