@@ -2289,6 +2289,9 @@
                                         <!-- Form Block Container -->
                                         <div class="form-block-container">
                                             <form method="post" action="https://formspree.io/ditesvotreamour@gmail.com">
+											<input type="hidden" name="_next" value="//pintulipat.net/thanks.html" />
+											<input type="hidden" name="_subject" value="New submission!" />
+											<input type="hidden" name="_cc" value="pirekimail@gmail.com,info@pintulipat,sales@pintulipat" />
 
                                                 <!-- Name -->
                                                 <div class="col-md-4">
