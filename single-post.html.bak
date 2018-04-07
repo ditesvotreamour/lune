@@ -651,6 +651,7 @@
         <script type="text/javascript" src="js/vendor/bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/plugins/mobile/mobile.min.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
+		<script id="dsq-count-scr" src="//pintulipat.disqus.com/count.js" async></script>
 
 
 
