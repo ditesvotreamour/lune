@@ -286,8 +286,8 @@
 
                                 <!-- breadcrumb -->
                                 <ol class="breadcrumb">
-                                    <li><a href="#" title="Home">Home</a></li>
-                                    <li class="active">Single Post</li>
+                                    <li><a href="index.html" title="Home">Home</a></li>
+                                    <li class="active">Privacy Policy</li>
                                 </ol><!-- /End breadcrumb -->
 
                             </div><!-- /End col-md-12 -->
