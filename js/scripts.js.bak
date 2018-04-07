@@ -76,7 +76,7 @@ notificationExpireDays = 10;
 pageSmoothScroll = true;
 
 
-googleMapAPIKey = 'AIzaSyBDGULVau4J4Chpc4DmyfwKoz3XRUwsEOQ';
+googleMapAPIKey = 'AIzaSyB8zGArQKSMNR1kok7ARtfCcIbIEKji6bs';
 
 
 /* =============================================================================

@@ -106,7 +106,7 @@
                                     <!-- Navbar Header -->
                                     <div class="navbar-header">
                                         <!-- Logo -->
-                                        <a href="#" class="navbar-brand" title="LUNE">
+                                        <a href="index.html" class="navbar-brand" title="PINTU LIPAT">
                                             <img src="images/logo.png" alt="LUNE Logo">
                                         </a><!-- /End Logo -->
                                     </div><!-- /End Navbar Header -->
