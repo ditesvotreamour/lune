@@ -216,7 +216,7 @@
                                                     </li>
 
                                                     <li style="">
-                                                        <a href="#timeline-section-2" title="Services" style="color: rgb(18, 18, 18); font-size: 14px; font-weight: 500;" src="images/uploads/team3.png">Blog</a>
+                                                        <a href="#timeline-section-2" title="Blog" style="color: rgb(18, 18, 18); font-size: 14px; font-weight: 500;" src="images/uploads/team3.png">Blog</a>
                                                     </li>
 
                                                     <li style="">
@@ -2333,7 +2333,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <input type="checkbox" class="form-control contact-terms" name="contact_terms" value="accepted">
-                                                        <label>I have read and agreed to Pintu Lipat <a href="#" title="terms and conditions">terms and conditions</a>.</label>
+                                                        <label>I have read and agreed to Pintu Lipat <a href="tos.html" title="terms and conditions">terms and conditions</a>.</label>
                                                     </div>
                                                 </div><!-- /End Terms -->
 
@@ -2582,10 +2582,10 @@
                                             <!-- Widget Block Content -->
                                             <div class="widget-block-content">
                                                 <ul>
-                                                    <li><a href="#" title="About">ABOUT US</a></li>
-                                                    <li><a href="#" title="Privacy Policy">PRIVACY POLICY</a></li>
-                                                    <li><a href="#" title="Terms of use">TERMS OF USE</a></li>
-                                                    <li><a href="#" title="Contact us">CONTACT US</a></li>
+                                                    <li><a href="#content-section-6" title="About">ABOUT US</a></li>
+                                                    <li><a href="privacy.html" title="Privacy Policy">PRIVACY POLICY</a></li>
+                                                    <li><a href="tos.html" title="Terms of use">TERMS OF USE</a></li>
+                                                    <li><a href="#contact-section-21" title="Contact us">CONTACT US</a></li>
                                                 </ul>
                                             </div><!-- /End Widget Block Content -->
 
