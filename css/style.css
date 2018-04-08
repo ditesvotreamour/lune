@@ -5657,8 +5657,8 @@ ul.select-menu-list li {
 /* Wrapper
 ----------------------------------------------------------------------------- */
 .form-message-block {
-    left: 50%;
-    bottom: 50%;
+    left: 20%;
+    bottom: 20%;
     z-index: 1060;
     color: #ffffff;
     margin: 0 auto;
