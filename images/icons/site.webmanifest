@@ -15,5 +15,6 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
+    "start_url": "http://pintulipat.net/index.html",
     "display": "standalone"
 }
