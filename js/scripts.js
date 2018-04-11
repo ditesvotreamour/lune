@@ -29,7 +29,7 @@ headerScroll = 'normal';
 parallaxEffect = true;
 
 // Mailchimp list URL
-mailchimpListURL = 'http://Graphicfort.us11.list-manage.com/subscribe/post?u=dffe9a5d2b472dbe0cc471e1b&amp;id=4150cd2f12';
+mailchimpListURL = 'https://pintulipat.us18.list-manage.com/subscribe/post?u=c32803a795e02c1a8960e4ac6&amp;id=762f125b3c';
 
 // Your Website recaptcha Key
 recaptchaSiteKey = '6LcQulEUAAAAAOkEKICBifIzLskqcrGMY8YS4j0R';
