@@ -29,7 +29,7 @@ headerScroll = 'normal';
 parallaxEffect = true;
 
 // Mailchimp list URL
-mailchimpListURL = 'https://pintulipat.us18.list-manage.com/subscribe/post?u=c32803a795e02c1a8960e4ac6&amp;id=762f125b3c';
+mailchimpListURL = 'https://app.mailjet.com/widget/iframe/2VML/66K';
 
 // Your Website recaptcha Key
 recaptchaSiteKey = '6LcQulEUAAAAAOkEKICBifIzLskqcrGMY8YS4j0R';
