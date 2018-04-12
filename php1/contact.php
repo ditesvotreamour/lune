@@ -1,7 +1,7 @@
 <?php
 
-    $email_address = "ditesvotreamour@gmail.com";                     // Your email address
-    $secret_key = "6LcQulEUAAAAANNVbFpK410oimCTuk4LAdVaoQ52";   // Your Captcha secret Key
+    $email_address = "support@pintulipat.net";                     // Your email address
+    $secret_key = "6LdHCQwTAAAAAE3YmyHwSxYuvyw5jXrdejFEbmds";   // Your Captcha secret Key
 
     $form_error = "";
     $captcha = $_POST["g-recaptcha-response"];

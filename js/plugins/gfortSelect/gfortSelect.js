@@ -1,1 +1,163 @@
-﻿(function(a){a.fn.gfortSelect=function(){var g,d=a(this),c,b="",f=d.parent(),e=d.children("option"),i='<ul class="select-menu-list">',h=Math.floor((Math.random()*10000)+1);e.each(function(){if(a(this).is(":disabled")){c=' class="disabled" '}else{c=""}a.each(this.attributes,function(){if(this.specified){b+=this.name+'= "'+this.value+'"'}});i+=("<li "+c+b+">"+a(this).html()+"</li>");b=""});i+="</ul>";f.append('<div class="gfort-select-wrapper" />').find("label").appendTo(f.find(".gfort-select-wrapper"));f.find(".gfort-select-wrapper").append(i);f.find(".gfort-select-wrapper").prepend('<input readonly type="text" class="form-control select-menu-input'+f.find("select").attr("class").replace("gfort-select","")+'" name="'+f.find("select").attr("name")+'" id="gfort-select-'+h+'">');f.find(".gfort-select-wrapper label").attr("for","#gfort-select-"+h+'"');if(d.find("option[selected]").index()<0){f.find("ul li:nth-child(1)").addClass("selected selected-first-item")}else{g=d.find("option[selected]").index()+1;f.find("ul li:nth-child("+g+")").addClass("selected");f.find(".select-menu-input").val(f.find("ul li:nth-child("+g+")").text()).addClass("input-filled")}d.css({display:"none"});a(".select-menu-input").on("click",function(j){j.stopPropagation();var m,k=a(this),l=k.parent();l.find(".select-menu-list").css({minWidth:k.outerWidth(true)+40});l.find("ul").removeClass("correct-position-1").removeClass("correct-position-2").removeClass("correct-position-3").removeClass("correct-position-4").removeClass("correct-position-5");m=l.find("ul li.selected").index()*l.find("ul li.selected").outerHeight(true);if(l.find("ul li:nth-child(1)").hasClass("selected")){l.find("ul").addClass("correct-position-1");l.find("ul").animate({scrollTop:m},0)}else{if(l.find("ul li:nth-child(2)").hasClass("selected")){l.find("ul").addClass("correct-position-2");l.find("ul").animate({scrollTop:0},0)}else{if(l.find("ul li:nth-last-child(2)").hasClass("selected")){if(l.find("ul li").length>=5){l.find("ul").addClass("correct-position-4");l.find("ul").animate({scrollTop:m},0)}else{l.find("ul").addClass("correct-position-3");m=(l.find("ul li.selected").index()-2)*l.find("ul li.selected").outerHeight(true);l.find("ul").animate({scrollTop:m},0)}}else{if(l.find("ul li:last-child").hasClass("selected")){if(l.find("ul li").length>=5){l.find("ul").addClass("correct-position-5");l.find("ul").animate({scrollTop:m},0)}else{if(l.find("ul li").length===3){l.find("ul").addClass("correct-position-3")}else{l.find("ul").addClass("correct-position-4")}m=(l.find("ul li.selected").index()-2)*l.find("ul li.selected").outerHeight(true);l.find("ul").animate({scrollTop:m},0)}}else{l.find("ul").addClass("correct-position-3");m=(l.find("ul li.selected").index()-2)*l.find("ul li.selected").outerHeight(true);l.find("ul").animate({scrollTop:m},0)}}}}l.find(".select-menu-input").addClass("input-filled");a(".show-select-menu-list").removeClass("show-select-menu-list");k.addClass("show-select-menu-list");a("body").addClass("stop-scroll")});a("body").on("click",function(){a("body").removeClass("stop-scroll");a(".select-menu-input").removeClass("show-select-menu-list");a(".select-menu-input").each(function(){if(a(this).val()===""){a(this).removeClass("input-filled")}})});a(".select-menu-list li").on("click",function(){var j=a(this),k=j.parent();if(!j.hasClass("disabled")){k.find(".selected").removeClass("selected").removeClass("selected-first-item");j.addClass("selected");k.parent().find(".select-menu-input").val(j.text()).removeClass("show-select-menu-list").addClass("input-filled");a("body").removeClass("stop-scroll")}})}}($));
+/*
+gfortSelect
+Description: convert default select style to google material design by Graphicfort
+Version: 1.0
+Author: Graphicfort
+Author URL: http://graphicfort.com
+*/
+/*global $*/
+(function ($) {
+
+    'use strict';
+
+    $.fn.gfortSelect = function () {
+
+        var indexVal,
+            el = $(this),
+            childrenIsDisabled,
+            childrenAllAtrr = '',
+            elParent = el.parent(),
+            elChildren = el.children('option'),
+            listItems = '<ul class="select-menu-list">',
+            intNumber = Math.floor((Math.random() * 10000) + 1);
+
+        /* children attributes
+        ----------------------------------------------------------------------------- */
+        elChildren.each(function () {
+
+            if ($(this).is(':disabled')) {
+                childrenIsDisabled = ' class="disabled" ';
+            } else {
+                childrenIsDisabled = '';
+            }
+
+            $.each(this.attributes, function () {
+                if (this.specified) {
+                    childrenAllAtrr += this.name + '= "' + this.value + '"';
+                }
+            });
+
+            listItems += ('<li ' + childrenIsDisabled + childrenAllAtrr + '>' + $(this).html() + '</li>');
+
+            childrenAllAtrr = '';
+
+        });
+
+        listItems += '</ul>';
+        elParent.append('<div class="gfort-select-wrapper" />').find('label').appendTo(elParent.find('.gfort-select-wrapper'));
+        elParent.find('.gfort-select-wrapper').append(listItems);
+
+        elParent.find('.gfort-select-wrapper').prepend('<input readonly type="text" class="form-control select-menu-input' + elParent.find('select').attr('class').replace('gfort-select', '') + '" name="' + elParent.find('select').attr('name') + '" id="gfort-select-' + intNumber + '">');
+        elParent.find('.gfort-select-wrapper label').attr('for', '#gfort-select-' + intNumber + '"');
+
+        if (el.find('option[selected]').index() < 0) {
+            elParent.find('ul li:nth-child(1)').addClass('selected selected-first-item');
+        } else {
+            indexVal = el.find('option[selected]').index() + 1;
+            elParent.find('ul li:nth-child(' + indexVal + ')').addClass('selected');
+            elParent.find('.select-menu-input').val(elParent.find('ul li:nth-child(' + indexVal + ')').text()).addClass('input-filled');
+        }
+
+        el.css({display: 'none'});
+
+        /* click on input
+        ----------------------------------------------------------------------------- */
+        $('.select-menu-input').on('click', function (e) {
+
+            e.stopPropagation();
+
+            var scrollList,
+                inputEl = $(this),
+                inputElParent = inputEl.parent();
+
+            inputElParent.find('.select-menu-list').css({minWidth: inputEl.outerWidth(true) + 40});
+
+            inputElParent.find('ul').removeClass('correct-position-1').removeClass('correct-position-2').removeClass('correct-position-3').removeClass('correct-position-4').removeClass('correct-position-5');
+
+            scrollList = inputElParent.find('ul li.selected').index() * inputElParent.find('ul li.selected').outerHeight(true);
+
+            if (inputElParent.find('ul li:nth-child(1)').hasClass('selected')) {
+
+                inputElParent.find('ul').addClass('correct-position-1');
+                inputElParent.find('ul').animate({scrollTop: scrollList}, 0);
+
+            } else if (inputElParent.find('ul li:nth-child(2)').hasClass('selected')) {
+
+                inputElParent.find('ul').addClass('correct-position-2');
+                inputElParent.find('ul').animate({scrollTop: 0}, 0);
+
+            } else if (inputElParent.find('ul li:nth-last-child(2)').hasClass('selected')) {
+
+                if (inputElParent.find('ul li').length >= 5) {
+                    inputElParent.find('ul').addClass('correct-position-4');
+                    inputElParent.find('ul').animate({scrollTop: scrollList}, 0);
+                } else {
+                    inputElParent.find('ul').addClass('correct-position-3');
+                    scrollList = (inputElParent.find('ul li.selected').index() - 2) * inputElParent.find('ul li.selected').outerHeight(true);
+                    inputElParent.find('ul').animate({scrollTop: scrollList}, 0);
+                }
+
+            } else if (inputElParent.find('ul li:last-child').hasClass('selected')) {
+
+                if (inputElParent.find('ul li').length >= 5) {
+                    inputElParent.find('ul').addClass('correct-position-5');
+                    inputElParent.find('ul').animate({scrollTop: scrollList}, 0);
+                } else {
+                    if (inputElParent.find('ul li').length === 3) {
+                        inputElParent.find('ul').addClass('correct-position-3');
+                    } else {
+                        inputElParent.find('ul').addClass('correct-position-4');
+                    }
+                    scrollList = (inputElParent.find('ul li.selected').index() - 2) * inputElParent.find('ul li.selected').outerHeight(true);
+                    inputElParent.find('ul').animate({scrollTop: scrollList}, 0);
+                }
+
+            } else {
+
+                inputElParent.find('ul').addClass('correct-position-3');
+                scrollList = (inputElParent.find('ul li.selected').index() - 2) * inputElParent.find('ul li.selected').outerHeight(true);
+                inputElParent.find('ul').animate({scrollTop: scrollList}, 0);
+
+            }
+
+            inputElParent.find('.select-menu-input').addClass('input-filled');
+            $('.show-select-menu-list').removeClass('show-select-menu-list');
+            inputEl.addClass('show-select-menu-list');
+            $('body').addClass('stop-scroll');
+
+        });
+
+        /* click on body
+        ----------------------------------------------------------------------------- */
+        $('body').on('click', function () {
+
+            $('body').removeClass('stop-scroll');
+            $('.select-menu-input').removeClass('show-select-menu-list');
+
+            $('.select-menu-input').each(function () {
+                if ($(this).val() === '') {
+                    $(this).removeClass('input-filled');
+                }
+            });
+
+        });
+
+        /* click on List Item
+        ----------------------------------------------------------------------------- */
+        $('.select-menu-list li').on('click', function () {
+
+            var listEl = $(this),
+                listElParent = listEl.parent();
+
+            if (!listEl.hasClass('disabled')) {
+                listElParent.find('.selected').removeClass('selected').removeClass('selected-first-item');
+                listEl.addClass('selected');
+                listElParent.parent().find('.select-menu-input').val(listEl.text()).removeClass('show-select-menu-list').addClass('input-filled');
+                $('body').removeClass('stop-scroll');
+            }
+
+        });
+
+    };
+
+}($));
