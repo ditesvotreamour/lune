@@ -1,5 +1,0 @@
-                                            <form method="POST" action="https://formspree.io/ditesvotreamour@gmail.com">
-											<input type="hidden" name="_next" value="//ditesvotreamour.github.io/lune/thanks.html" />
-											<input type="hidden" name="_subject" value="New submission!" />
-											<input type="hidden" name="_cc" value="info@pintulipat,pirekimail@gmail.com" />
-											<input type="hidden" name="_format" value="plain" />
